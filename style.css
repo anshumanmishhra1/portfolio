@@ -83,6 +83,7 @@ header {
 			}
 		}
 		.mobile-toggle {
+			display: flex;
 			display:none;
 			color:var(--base-800);
 			padding:10px;
