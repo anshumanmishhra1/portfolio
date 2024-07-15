@@ -63,6 +63,9 @@ header {
 			margin-right:20px;
 			border-radius:50%;
 		}
+		img{
+			border-radius: 100%;
+		}
 		.logo-text {
 			flex:1;
 		}
