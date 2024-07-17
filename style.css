@@ -627,3 +627,13 @@ h3{
 	color: var(--base-800); /* Adjust color as needed */
   }
   
+  @media (max-width: 768px) {
+	.certification-section {
+	  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+	}
+  
+	.certification-section img {
+	  height: 150px; /* Adjust height for smaller screens */
+	}
+  }
+  
