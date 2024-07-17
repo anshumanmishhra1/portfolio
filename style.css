@@ -19,12 +19,16 @@
 	--blue-800: #0a61ae;
 }
 
+html{
+	scroll-behavior: smooth;
+}
 body {
 	font-family: "Open Sans", sans-serif;
 	font-optical-sizing: auto;
 	font-style: normal;
 	font-size: 20px;
 	padding-bottom:1000px;
+	scroll-behavior: smooth;
 }
 
 a {
