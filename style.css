@@ -27,7 +27,6 @@ body {
 	font-optical-sizing: auto;
 	font-style: normal;
 	font-size: 20px;
-	padding-bottom:1000px;
 	scroll-behavior: smooth;
 }
 
@@ -229,12 +228,15 @@ h1{
 		border-radius:30px;
 		padding:0px 30px;
 		display:flex;
+		height: 420px;
 		justify-content:center;
 		align-items:flex-end;
 		img {
-			margin-top:-60px;
-			max-width:420px;
-			margin-bottom:-10px;
+			margin-top:40px;
+			max-width:400px;
+			height: 700px;
+			margin-bottom: -312px;
+			
 		}
 	}
 }
