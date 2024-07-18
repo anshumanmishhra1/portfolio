@@ -375,7 +375,7 @@ h3{
 			left: 0;
 			height: 100%;
 			width: 100%;
-			object-fit: cover;
+			/* object-fit: cover; */
 			transition: transform 3s ease;
 		  }
   
@@ -646,3 +646,7 @@ h3{
 	}
   }
   
+.workplacess2{
+	background-repeat: repeat;
+	background-size: cover;
+}
