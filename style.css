@@ -61,6 +61,8 @@ header {
 		}
 		.logo-text {
 			flex:1;
+			
+			padding-left: 33px;
 		}
 	}
 
@@ -105,10 +107,6 @@ header {
 	}
 
 	@media (max-width: 768px) {
-		header{
-			justify-content: space-between;
-			gap: 13px;
-		}
 		flex-direction:column;
 		align-items:center;
 		nav {
