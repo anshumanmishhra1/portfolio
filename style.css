@@ -105,6 +105,9 @@ header {
 	}
 
 	@media (max-width: 768px) {
+		header{
+			justify-content: space-between;
+		}
 		flex-direction:column;
 		align-items:center;
 		nav {
