@@ -58,7 +58,7 @@ header {
 		img{
 			border-radius: 50%;
 			width: 60px;
-			margin-left: -1rem;
+			margin-left: -0.5rem;
 		}
 		.logo-text {
 			flex:1;
