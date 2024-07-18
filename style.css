@@ -107,6 +107,7 @@ header {
 	@media (max-width: 768px) {
 		header{
 			justify-content: space-between;
+			gap: 13px;
 		}
 		flex-direction:column;
 		align-items:center;
