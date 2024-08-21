@@ -3,6 +3,7 @@
 	margin:0;
 	padding:0;
 }
+//just commenting
 
 :root {
 	--base: #555;
@@ -646,5 +647,12 @@ h3{
 	}
   }
   
+<<<<<<< HEAD
 
   
+=======
+.workplacess2{
+	background-repeat: repeat;
+	background-size: cover;
+}
+>>>>>>> 2fb9fb6473b79afa7f0112b29f5365392b127dfa
