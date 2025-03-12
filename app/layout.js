@@ -26,6 +26,8 @@ const greetings = [
   { lang: "Odia", text: "ନମସ୍କାର" },
 ];
 
+const colors = ["#FF9933", "#FFFFFF", "#138808"]; // Indian flag colors: saffron, white, green
+
 function Loader({ onComplete }) {
   const [index, setIndex] = useState(0);
 
@@ -45,8 +47,10 @@ function Loader({ onComplete }) {
   }, [onComplete]);
 
   return (
-    <div className="fixed inset-0 flex flex-col items-center justify-center bg-zinc-900 text-white text-4xl font-bold animate-fade-in">
-      <p className="transition-all duration-300">{greetings[index].text}</p>
+    <div className="fixed inset-0 flex flex-col items-center justify-center bg-zinc-900 text-4xl font-bold animate-fade-in">
+      <p className="transition-all duration-300" style={{ color: colors[index % colors.length] }}>
+        {greetings[index].text}
+      </p>
       <span className="text-lg text-gray-400 mt-2">({greetings[index].lang})</span>
     </div>
   );
