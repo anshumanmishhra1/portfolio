@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import { FaArrowUp } from "react-icons/fa6";
 
 const DEFAULT_BTN_CLS =
-  "fixed bottom-8 right-6 z-50 flex items-center rounded-full bg-[#046a38] p-4 hover:text-xl transition-all duration-300 ease-out";
+  "fixed bottom-8 right-6 z-50 flex items-center rounded-lg bg-[#2d2d2d] p-4 hover:text-lg transition-all duration-300 ease-out text-[#61dafb] font-mono";
 const SCROLL_THRESHOLD = 50;
 
 const ScrollToTop = () => {
