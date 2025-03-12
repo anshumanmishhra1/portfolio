@@ -1,5 +1,6 @@
 // @flow strict
-
+"use client"; 
+import { useState, useEffect } from "react";  // ✅ Add this line
 import { personalData } from "@/utils/data/personal-data";
 import Image from "next/image";
 import Link from "next/link";
@@ -9,7 +10,35 @@ import { MdDownload } from "react-icons/md";
 import { RiContactsFill } from "react-icons/ri";
 import { SiLeetcode } from "react-icons/si";
 
+
+const designations = [
+  "Full Stack Developer",
+  "Software Engineer",
+  "Part-Time YouTuber / Video Editor",
+];
 function HeroSection() {
+  const [currentDesignation, setCurrentDesignation] = useState("");
+  const [index, setIndex] = useState(0);
+  const [letterIndex, setLetterIndex] = useState(0);
+
+  useEffect(() => {
+    const designation = designations[index];
+
+    if (letterIndex < designation.length) {
+      const timeout = setTimeout(() => {
+        setCurrentDesignation(designation.slice(0, letterIndex + 1));
+        setLetterIndex(letterIndex + 1);
+      }, 100); // Speed of letter appearance
+
+      return () => clearTimeout(timeout);
+    } else {
+      setTimeout(() => {
+        setIndex((prevIndex) => (prevIndex + 1) % designations.length);
+        setLetterIndex(0);
+        setCurrentDesignation("");
+      }, 2000); // Hold time before switching
+    }
+  }, [letterIndex, index]);
   return (
     <section className="relative flex flex-col items-center justify-between py-4 lg:py-12">
       <Image
@@ -26,7 +55,10 @@ function HeroSection() {
             Hello, <br />
             I'm <span className="text-[#FC1500]">{personalData.name}</span>
             {` , I'm a Professional `}
-            <span className=" text-[#3F926B]">{personalData.designation}</span>.
+            <span className="text-[#3F926B] transition-opacity duration-500 ease-in-out">
+              {currentDesignation}
+            </span>
+            .
           </h1>
 
           <div className="my-12 flex items-center gap-5">
@@ -41,7 +73,7 @@ function HeroSection() {
             <Link
               href={personalData.github}
               target="_blank"
-              className="transition-all text-[#171515]  hover:scale-125 duration-300"
+              className="transition-all text-[#171515] hover:scale-125 duration-300"
             >
               <BsGithub size={30} className="bg-white" />
             </Link>
@@ -75,7 +107,7 @@ function HeroSection() {
               href="#contact"
               className="bg-gradient-to-r to-pink-500 from-violet-600 p-[1px] rounded-full transition-all duration-300 hover:from-pink-500 hover:to-violet-600"
             >
-              <button className="px-3 text-xs md:px-8 py-3 md:py-4 bg-[#FC1500] rounded-full border-none text-center md:text-sm font-medium uppercase tracking-wider text-[#ffff] no-underline transition-all duration-200 ease-out  md:font-semibold flex items-center gap-1 hover:gap-3">
+              <button className="px-3 text-xs md:px-8 py-3 md:py-4 bg-[#FC1500] rounded-full border-none text-center md:text-sm font-medium uppercase tracking-wider text-[#ffff] no-underline transition-all duration-200 ease-out md:font-semibold flex items-center gap-1 hover:gap-3">
                 <span>Contact me</span>
                 <RiContactsFill size={16} />
               </button>
@@ -92,6 +124,7 @@ function HeroSection() {
             </Link>
           </div>
         </div>
+
         <div className="order-1 lg:order-2 bg-[#2F2F2F] border-[#1b2c68a0] relative rounded-lg">
           <div className="flex flex-row">
             <div className="h-[1px] w-full bg-gradient-to-r from-transparent via-pink-500 to-violet-600"></div>
