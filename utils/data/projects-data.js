@@ -5,7 +5,7 @@ export const projectsData = [
         tools: ['ReactJs', 'MongoDB', 'Express.js', 'NodeJS', 'Cloudinary',],
         role: 'Full Stack Developer',
         code: 'https://github.com/anshumanmishhra1/PicPrism',
-        demo: 'https://youtu.be/C7YlvSJGRAY',
+        demo: 'https://pic-prism-react.vercel.app/',
         role: 'Full Stack Developer',
         description: 'Engineered an Image Market place for selling and purchasing of of Pictures Online using MERN Stack. Key features include seller/buyer dashboard, giving opportunity to upload pictures and set the price for the buyer, seamless payments.'
     },
